@@ -20,7 +20,7 @@ define pxe::images::debian (
   }
 
   # http://mirrors.kernel.org/debian/dists/lucid/main/installer-amd64/current/images/netboot/debian-installer/amd64/
-  $path    = "${ver}/main/installer-${arch}/current/images/${netboot}/${os}-installer/${arch}"
+  $path    = "${ver}/main/installer-${arch}/current/legacy-images/${netboot}/${os}-installer/${arch}"
   $tftp_root = $pxe::tftp_root
 
   archive { "${tftp_root}/images/${os}/${ver}/${arch}/linux":
